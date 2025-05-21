@@ -66,19 +66,19 @@ def create_importance_performance_plot(csv_path, output_path, title):
 
     # Quadrant A (Top-left)
     plt.text(x_min + margin, y_max - margin,
-             'Sürgős beavatkozás',
+             '(A) Sürgős beavatkozás',
              ha='left', va='top', fontsize=16, fontweight='bold', bbox=dict(facecolor='white', alpha=0.7, edgecolor='none'))
     # Quadrant B (Top-right)
     plt.text(x_max - margin, y_max - margin,
-             'Megfelelő',
+             '(B) Megfelelő',
              ha='right', va='top', fontsize=16, fontweight='bold', bbox=dict(facecolor='white', alpha=0.7, edgecolor='none'))
     # Quadrant C (Bottom-left)
     plt.text(x_min + margin, y_min + margin,
-             'Fejlesztendő',
+             '(C) Fejlesztendő',
              ha='left', va='bottom', fontsize=16, fontweight='bold', bbox=dict(facecolor='white', alpha=0.7, edgecolor='none'))
     # Quadrant D (Bottom-right)
     plt.text(x_max - margin, y_min + margin,
-             'Túlzó',
+             '(D) Túlzó',
              ha='right', va='bottom', fontsize=16, fontweight='bold', bbox=dict(facecolor='white', alpha=0.7, edgecolor='none'))
 
     # Create output directory if it doesn't exist

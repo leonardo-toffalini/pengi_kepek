@@ -28,14 +28,19 @@ def create_importance_performance_plot(csv_path, output_path, title):
     # Create scatter plot of means with vibrant colors
     scatter = plt.scatter(means[:, 1], means[:, 0], 
                c=range(len(means)),  # Use index for distinct colors
-               cmap='viridis',
-               s=150,  # Increased marker size
+               cmap='tab20b',
+               s=200,  # Increased marker size
                alpha=0.9)  # Increased opacity
 
     # Add legend
-    plt.legend(scatter.legend_elements()[0], aspect_names,
+    legend = plt.legend(scatter.legend_elements()[0], aspect_names,
               loc='center left',
-              bbox_to_anchor=(0.00, 0.20))
+              bbox_to_anchor=(0.00, 0.25),
+              fontsize=14)
+    
+    # Make legend markers bigger
+    for handle in legend.legend_handles:
+        handle.set_markersize(15)  # Increase marker size in legend
 
     # Add labels and title
     plt.xlabel('Teljesítmény', fontsize=18)
